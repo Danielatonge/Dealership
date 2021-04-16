@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ModelInfo />
+    <ModelInfo :machine="getMachine" />
     <v-row class="mb-3 mt-3">
       <v-col class="text-h6" cols="12">
         Список операций, выполняемых при данном виде работ
@@ -75,11 +75,16 @@
 
 <script>
 import ModelInfo from "@/components/ModelInfo";
-
+import { mapGetters } from "vuex";
 export default {
   name: "Maintenance",
   components: {
     ModelInfo,
+  },
+  computed: {
+    ...mapGetters([
+      "getMachine"
+    ]),
   },
   data() {
     return {
@@ -120,7 +125,7 @@ export default {
           results:
             "В ручном режиме довести до концевых выключателей, проверить наличие свободного хода до ограничителей",
           state: true,
-        }
+        },
       ],
     };
   },

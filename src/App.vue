@@ -109,5 +109,8 @@ export default {
       },
     ],
   }),
+  mounted() {
+    this.$store.dispatch('loadItem');
+  }
 };
 </script>
