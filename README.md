@@ -15,3 +15,12 @@ npm run serve
 npm run build
 ```
 
+### Run Json server to mimic backend RESTAPI
+```
+json-server --watch db.json
+```
+
+### Compiles and hot-reloads for development electron standalone desktop application
+```
+npm run electron:serve
+```
