@@ -1,6 +1,13 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" :width="350" app>
+    <v-navigation-drawer
+      absolute
+      left
+      v-model="drawer"
+      :permanent="$vuetify.breakpoint.mdAndUp"
+      :width="350"
+      app
+    >
       <v-sheet color="grey lighten-4" class="pa-4">
         <div>
           <!-- <v-icon class="">mdi-arrow-left</v-icon> -->
@@ -28,13 +35,11 @@
               color="warning"
               open-on-click
               transition
-              
-            >{{selected}}</v-treeview>
+              >{{ selected }}</v-treeview
+            >
           </v-card>
         </v-tab-item>
       </v-tabs-items>
-      
-      
     </v-navigation-drawer>
 
     <v-main>
@@ -52,8 +57,8 @@ export default {
       if (!this.active.length) return undefined;
 
       const id = this.active[0];
-      if(typeof id === 'string' || id instanceof String) {
-        this.$router.push({path: id });
+      if (typeof id === "string" || id instanceof String) {
+        this.$router.push({ path: id });
       }
     },
   },
@@ -83,8 +88,8 @@ export default {
                 id: 5,
                 name: "ACCUWAY UT-2OOM (TA-315, цех N12)",
                 children: [
-                  { id: '/characteristic', name: "Характеристики" },
-                  { id: '/maintain', name: "Техническое обслуживание" },
+                  { id: "/characteristic", name: "Характеристики" },
+                  { id: "/maintain", name: "Техническое обслуживание" },
                   { id: 8, name: "Дефекты и отказы" },
                   { id: 9, name: "Архив документов" },
                   { id: 10, name: "Наработка" },
@@ -110,7 +115,7 @@ export default {
     ],
   }),
   mounted() {
-    this.$store.dispatch('loadItem');
-  }
+    this.$store.dispatch("loadItem");
+  },
 };
 </script>
