@@ -27,4 +27,4 @@ npm run electron:serve
 
 ### Screenshot
 
-![Screenshot](https://github.com/Danielatonge/Dealership/tree/master/src/assets/../../../../../../../../src/assets/screenshot.png)
+![Screenshot](https://github.com/Danielatonge/Dealership/blob/master/src/assets/screenshot.png)
