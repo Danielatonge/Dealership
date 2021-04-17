@@ -24,3 +24,7 @@ json-server --watch db.json
 ```
 npm run electron:serve
 ```
+
+### Screenshot
+
+![Screenshot](https://github.com/Danielatonge/Dealership/tree/master/src/assets/../../../../../../../../src/assets/screenshot.png)
